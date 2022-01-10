@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Courier Prime', monospace;
+    
+}
+
+body{
+    background-color:rgb(36,36,36);
+}
+
+nav{
+    display: flex;
+    padding:2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex:1;
+    text-align: center;
+    
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.title{
+    position: relative;
+    top:20%;
+    left:5%;
+    margin:0;
+    text-align: left;
+    width:auto;
+}
+
+
+.title h1{
+    color: white;
+    font-size: 50px;
+    
+}
+
+.title h1:nth-child(1){
+    animation: text-fade 2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.title h1:nth-child(2){
+    animation: text-fade 4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.title h1:nth-child(3){
+    width: 600px;
+    animation: text-fade 6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+@keyframes text-fade{
+    from {color:rgb(36,36,36)}
+    to {color:white;}
+}
+
+
+.rect{
+    margin:0;
+    padding: 0;
+    position: absolute;
+    width:170px;
+    height:100%;
+    opacity: 0%;
+}
+
+
+.rect.a{
+    top:0%;
+    left:10%;
+    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    background:linear-gradient(#fd746c,#DBD65C);
+    clip-path: polygon(100px 0,227px 0,227px 650px, 0 650px);
+    transform: skew(-10deg);
+}
+.rect.b{
+    top:0%;
+    left:30%;
+    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    animation-delay: 0.25s;
+    background:linear-gradient(to top,  #DBD65C,#43cea2);
+    transform: skew(-30deg);
+}
+
+.rect.c{
+    top:0%;
+    left:70%;
+    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    animation-delay: 0.5s;
+    background:linear-gradient(to bottom, #43cea2,#8360c3);
+    /* clip-path: polygon(0 0,227px 650px,200 650px); */
+    clip-path: polygon(100px 0,227px 0,227px 650px, 0 650px);
+    transform: skew(40deg);  
+}
+
+
+@keyframes reveal {
+    to {opacity: 100%;}
+}
+
+
+
+
+
+
+
