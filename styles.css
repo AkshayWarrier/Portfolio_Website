@@ -6,7 +6,8 @@
 }
 
 body{
-    background-color:rgb(36,36,36);
+    background-color:rgb(0,0,0);
+    overflow-x: hidden;
 }
 
 nav{
@@ -109,7 +110,7 @@ nav{
     left:10%;
     animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
     background:linear-gradient(#fd746c,#DBD65C);
-    clip-path: polygon(100px 0,227px 0,227px 650px, 0 650px);
+    /* clip-path: polygon(100px 0,227px 0,227px 650px, 0 650px); */
     transform: skew(-10deg);
 }
 .rect.b{
@@ -127,9 +128,35 @@ nav{
     animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
     animation-delay: 0.5s;
     background:linear-gradient(to bottom, #43cea2,#8360c3);
-    /* clip-path: polygon(0 0,227px 650px,200 650px); */
-    clip-path: polygon(100px 0,227px 0,227px 650px, 0 650px);
     transform: skew(40deg);  
+}
+
+.rect.d{
+    height:60%;
+    top:100%;
+    left:3%;
+    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    background:rgb(26,26,26);
+    /* clip-path: polygon(100px 0,227px 0,227px 650px, 0 650px); */
+    transform: skew(-10deg);
+}
+.rect.e{
+    height: 60%;
+    top:100%;
+    left:7.1%;
+    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    animation-delay: 0.25s;
+    background:rgb(36,36,36);
+    transform: skew(-30deg);
+}
+.rect.f{
+    height: 40%;
+    top:100%;
+    left:94%;
+    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    animation-delay: 0.5s;
+    background:rgb(46,46,46);
+    transform: skew(40deg);
 }
 
 
@@ -158,15 +185,15 @@ nav{
 
 .icon-container{
     display: flex;
-    padding:2% 2%;
+    padding:2% 0%;
     height: max-content;
     justify-content: space-around;
+    
 }
 
 .icon-list{
     flex: 1;
-    text-align: center;
-     
+    text-align: center;   
 }
 .icon-list ul li{
     border-radius: 50%;
@@ -178,9 +205,14 @@ nav{
     display: inline-block;
     position: relative;
     width:90px;
-    height: 90px;   
+    height: 90px;
+    transition: 0.5s;   
 }
-
+.icon-list ul li:hover{
+    background-color:rgba(173, 100, 241, 0.5);
+    border-radius: 20%;
+    /* transform: rotate(45deg); */
+}
 
 li img {
     top:10%;
