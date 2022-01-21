@@ -254,7 +254,8 @@ img.c,img.cpp,img.js{
 }
 
 .grid-container .grid-item{
-    background: linear-gradient(#FF0099,#493240);
+    /* background: linear-gradient(#FF0099,#493240); */
+    background: #272822;
     width: 350px;
     height: 350px;
     padding: 0 0;
@@ -270,8 +271,28 @@ img.c,img.cpp,img.js{
     height:100%;
     backface-visibility: hidden;
 }
-.front h1{
-    font-size:40px;
+.front p{
+    position: relative;
+    top:15%;
+    left:2%;
+    font-size:18px;
+    text-align: left;
+    color:white;
+}
+.s1{
+    color:#f92665;
+}
+.s2{
+    color:orangered;
+}
+.s3{
+    color:rgb(128, 218, 39);
+}
+.s4{
+    color:khaki;
+}
+.s5{
+    color:dimgray;
 }
 .grid-item .back{
     position: absolute;
