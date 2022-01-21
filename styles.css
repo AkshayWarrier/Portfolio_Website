@@ -204,7 +204,6 @@ nav{
     border-radius: 50%;
     border:5px solid transparent;
     box-shadow:  10px 10px 15px rgba(0,0,0,0.5);
-    /* border-image: url("images/Almost.jpg") 30 round; */
     padding:1% 1%;
     list-style: none;
     display: inline-block;
@@ -214,7 +213,6 @@ nav{
     transition: 0.5s;   
 }
 .icon-list ul li:hover{
-    /* background-color:rgba(173, 100, 241, 0.5); */
     border-radius: 20%;
 }
 
@@ -262,34 +260,63 @@ img.c,img.cpp,img.js{
     padding: 0 0;
     border-radius: 10px;
     border: 5px solid white;
+    
+    transform-style: preserve-3d;
     transition: all 0.5s ease;
+}
+.grid-item .front{
+    position: absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+}
+.front h1{
+    font-size:40px;
+}
+.grid-item .back{
+    position: absolute;
+    width:100%;
+    height:100%;
     overflow:hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background:linear-gradient(to bottom, #43cea2,#8360c3);
+}
+.grid-item-1 .back{
+    background-image: url("images/gifs/astar.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grid-item-2 .back{
+    background-image:url("images/gifs/graph.gif");
+}
+.grid-item-3 .back{
+    background-image:url("images/gifs/sudoku.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.grid-item-4 .back{
+    background-image:url("images/gifs/snake.gif");
+}
+.grid-item-5 .back{
+    background-image:url("images/gifs/tic.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grid-item-6 .back{
+    background-image:url("images/gifs/pixel.jpg");
+    background-position: center;
+}
+.grid-item:active{
+    transform: rotateY(180deg);
 }
 .grid-container .grid-item:nth-child(2n){
     background: linear-gradient(#c31432,#240b36)
 }
-.grid-container .grid-item .overlay{
-    position: relative;
-    top:-50%;
-    left:-3%;
-    width:450px;
-    height: 70%;
-    background-color: #11052C;
-    opacity: 100%;
-    transition: 1s;
-}
+.grid-item
 
-.grid-item h1{ 
-    position: relative;
-    /* display:block; */
-    box-sizing: border-box;
-    font-size:40px;
-    color: white;
-}
 .grid-container .grid-item img{
     top:-17%;
-    opacity: 100%;
-    transition: 0.5s;
 }
 
 .grid-container .grid-item img.a{
