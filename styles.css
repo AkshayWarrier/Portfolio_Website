@@ -301,7 +301,6 @@ img.c,img.cpp,img.js{
     overflow:hidden;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    background:linear-gradient(to bottom, #43cea2,#8360c3);
 }
 .grid-item-1 .back{
     background-image: url("images/gifs/astar.gif");
@@ -331,9 +330,7 @@ img.c,img.cpp,img.js{
 .grid-item:active{
     transform: rotateY(180deg);
 }
-.grid-container .grid-item:nth-child(2n){
-    background: linear-gradient(#c31432,#240b36)
-}
+
 .grid-item
 
 .grid-container .grid-item img{
