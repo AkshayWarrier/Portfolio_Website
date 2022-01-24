@@ -2,15 +2,24 @@
     margin: 0;
     padding:0;
     font-family: 'Source Code Pro', monospace;
-    
+}
+:root{
+    font-size: 16px;
+}
+@media (max-width:900px) {
+    :root{
+        font-size: 12px;
+    }
 }
 
 body{
     background-color:rgb(0,0,0);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    /* height:100%; */
 }
 
 nav{
+    position: relative;
     display: flex;
     padding:2% 6%;
     justify-content: space-between;
@@ -20,7 +29,6 @@ nav{
 .nav-links{
     flex:1;
     text-align: center;
-    
 }
 
 .nav-links ul li{
@@ -33,62 +41,47 @@ nav{
 .nav-links ul li a{
     color: #fff;
     text-decoration: none;
-    /* font-family: Poppins; */
     font-size: 15px;
     font-weight: 500;
     transition: 0.5s;
 }
 .nav-links ul li a:hover{
     color: purple;
-
 }
 
+
+.rect-container{
+    height: auto;
+    width: auto;
+}
 .title{
-    position: relative;
-    top:20%;
-    left:5%;
-    margin:0 0;
+    margin-left: 20px;
+    margin-bottom: 5%;
     text-align: left;
-    width:600px;
+    max-width: 50%;
+    min-width:300px;
 }
+
 
 .title.n{
-    text-align: left;
-    left:55%;
+    margin-left: auto;
+    margin-bottom: 0;
 }
-
-.title.n h1:nth-child(1){
-    animation: text-fade 3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
-.title.n h1:nth-child(2){
-    animation: text-fade 3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
-
-.title.n h1:nth-child(3){
-    animation: text-fade 3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    position: relative;
-    height: 63px;
-    width:600px;
-    text-align: left;
-    /* left:15%; */
-}
-
 
 .title h1{
     color: white;
-    font-size: 50px;
+    font-size: 3rem;    
     font-weight: 500;
 }
+  
+ 
 
-.title h1:nth-child(1){
+
+.title h1{
+    animation: text-fade 3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.title h1.first{
     animation: text-fade 2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
-.title h1:nth-child(2){
-    animation: text-fade 3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
-.title h1:nth-child(3){
-    width: 600px;
-    animation: text-fade 3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 @keyframes text-fade{
@@ -96,27 +89,23 @@ nav{
     to {color:white;}
 }
 
-
 .rect{
-    margin:0;
-    padding: 0;
-    position: absolute;
-    width:170px;
+    position: fixed;
+    z-index: -1;
     height:100%;
+    width:14vw;
     opacity: 0%;
-}
+}   
+
 
 
 .rect.a{
-    top:0%;
     left:10%;
     animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
     background:linear-gradient(#fd746c,#DBD65C);
-    /* clip-path: polygon(100px 0,227px 0,227px 650px, 0 650px); */
     transform: skew(-10deg);
 }
 .rect.b{
-    top:0%;
     left:30%;
     animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
     animation-delay: 0.25s;
@@ -125,7 +114,6 @@ nav{
 }
 
 .rect.c{
-    top:0%;
     left:65%;
     animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
     animation-delay: 0.5s;
@@ -133,33 +121,41 @@ nav{
     transform: skew(40deg);  
 }
 
-.rect.d{
-    height:60%;
-    top:100%;
-    left:3.4%;
-    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
-    background:rgb(26,26,26);
-    /* clip-path: polygon(100px 0,227px 0,227px 650px, 0 650px); */
-    transform: skew(-10deg);
+@media (max-width:1300px) {
+    .rect.c{
+        transform: skew(35deg);
+    }
 }
-.rect.e{
-    height: 60%;
-    top:100%;
-    left:7.8%;
-    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
-    animation-delay: 0.25s;
-    background:rgb(36,36,36);
-    transform: skew(-30deg);
+@media (max-width:1200px) {
+    .rect.c{
+        transform: skew(30deg);
+    }
 }
-.rect.f{
-    height: 40%;
-    top:100%;
-    left:92.6%;
-    animation: reveal 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
-    animation-delay: 0.5s;
-    background:rgb(46,46,46);
-    transform: skew(40deg);
+@media (max-width:1050px) {
+    .rect.c{
+        transform: skew(20deg) ;
+    }
 }
+@media (max-width:850px) {
+    .rect.a{
+        transform: skew(-5deg);
+    }
+    .rect.b{
+        transform: skew(-25deg);
+    }
+    .rect.c{
+        transform: skew(15deg) ;
+    }
+}
+@media (max-width:770px) {
+    .rect.b{
+        transform: skew(-20deg);
+    }
+    .rect.c{
+        transform: skew(10deg) ;
+    }
+}
+
 
 
 @keyframes reveal {
@@ -168,8 +164,6 @@ nav{
 
 .skills{
     background-color: white;
-    position: absolute;
-    top:100%;
     display: flex;
     flex-direction: column;
     height: 380px;
@@ -178,7 +172,7 @@ nav{
 .skills h1{
     padding:2% 0%;
     text-align: center;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: 500;
     height: 60px;
     width: 100%;
@@ -224,41 +218,45 @@ img.c,img.cpp,img.js{
 }
 
 .projects{
-    display:flex;
-    flex-direction: column;
-    position: absolute;
-    top:160%;
-    height: 100%;
     width:100%;
+    background: black;
 }
 .projects h1{
     color:white;
-    padding:2% 0%;
+    padding: 1% 0%;
     text-align: center;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: 500;
-    height: 60px;
     width: 100%;
 }
 .grid-container{
-    position: relative;
-    left:1.5%;
     display: grid;
-    width:max-content;
-    height: min-content;
+    width:100%;
+    height: 100%;
     grid-template-columns: 2fr 2fr 2fr;
-    gap:10% 10%;
+    gap:1% 5%;
 }
+@media (max-width:1340px) {
+    .grid-container{
+        grid-template-columns: 2fr 2fr;
+    } 
+}
+@media (max-width:850px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+        gap: 0%;
+    }
 
+
+}
 .grid-container .grid-item{
-    /* background: linear-gradient(#FF0099,#493240); */
     background: #272822;
     width: 350px;
     height: 350px;
     padding: 0 0;
     border-radius: 10px;
     border: 5px solid white;
-    
+    margin:auto;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
 }
@@ -328,7 +326,6 @@ img.c,img.cpp,img.js{
     transform: rotateY(180deg);
 }
 
-.grid-item
 
 .grid-container .grid-item img{
     top:-17%;
@@ -358,19 +355,19 @@ img.c,img.cpp,img.js{
 }
 .socials{
     display: flex;
-    position: relative;
-    top:20%;
-    left:45%;
-    width:max-content;
-    height: min-content;
+    justify-content: center;
+    margin-top: 10%;
 }
 .socials .fa{
-    width:40px;
-    height:40px;
-    padding:5px 5px;
+    flex:1;
+    width:100%;
+    height:100%;
+    padding:0px 10px;
     font-size: 30px;
     color:white;
 }
 
+@media (max-width:850px) {
+}
 
 
